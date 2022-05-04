@@ -1,0 +1,9 @@
+<location path="production.site.com">
+  <system.webServer>
+    <aspNetCore>
+      <environmentVariables>{{ range $n, $v := . }}
+          <environmentVariable name="{{$n}}" value="{{$v}}" />{{end}}
+      </environmentVariables>
+    </aspNetCore>
+  </system.webServer>
+</location>
