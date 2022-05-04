@@ -409,3 +409,4 @@ doppler.secrets.json
 web.config
 *.swp
 *.*~
+.DS_Store
