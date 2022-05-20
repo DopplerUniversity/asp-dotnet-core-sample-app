@@ -19,8 +19,7 @@ namespace DopplerWebApp
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args).ConfigureAppConfiguration((hostingContext, config) =>
             {
-                // Optionally secrets using file system for easier debugging
-                config.AddJsonFile("doppler.json", true);
+                config.AddJsonFile("doppler.appSettings.json", optional: true);
             })
             .ConfigureWebHostDefaults(webBuilder =>
             {

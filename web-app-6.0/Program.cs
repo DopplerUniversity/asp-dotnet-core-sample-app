@@ -1,4 +1,4 @@
-﻿using DopplerWebApp.Models;
+﻿using DopplerWebApp;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,12 +6,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 
 // Prefer the use of environment variables using the 'dotnet-env` name transformer
-builder.Services.Configure<Doppler>(builder.Configuration);
+builder.Services.Configure<AppSettings>(builder.Configuration);
 
-// While not recommended, can also use 'doppler secrets download' with the 'dotnet' name transformer
 builder.Host.ConfigureAppConfiguration((hostingContext, config) =>
 {
-    config.AddJsonFile("doppler.secrets.json", optional: true);
+    config.AddJsonFile("doppler.appSettings.json", optional: true);
 });
 
 var app = builder.Build();

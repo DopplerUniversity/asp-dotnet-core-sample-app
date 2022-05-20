@@ -1,24 +1,24 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Options;
-using DopplerWebApp.Models;
 
 namespace DopplerWebApp.Pages;
 
 public class IndexModel : PageModel
 {
     private readonly ILogger<IndexModel> _logger;
+    private readonly AppSettings _appSettings;
 
-    public Doppler Doppler { get; set; }
+    public AppSettings AppSettings { get; set; }
 
-    public IndexModel(ILogger<IndexModel> logger, IOptions<Doppler> doppler)
+    public IndexModel(ILogger<IndexModel> logger, IOptions<AppSettings> appSettings)
     {
         _logger = logger;
-        Doppler = doppler.Value;
+        _appSettings = appSettings.Value;
     }
 
     public void OnGet()
     {
-
+        AppSettings = _appSettings;
     }
 }

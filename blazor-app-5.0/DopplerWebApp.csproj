@@ -1,9 +1,0 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
-
-  <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
-    <RootNamespace>DopplerWebApp</RootNamespace>
-    <UserSecretsId>2b65eec6-a96d-40fc-812f-d5db6183ef1a</UserSecretsId>
-  </PropertyGroup>
-
-</Project>

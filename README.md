@@ -28,8 +28,8 @@ You're now ready to start exploring the sample applications
 
 ## Sample Apps
 
-- [Blazor 6.0](./blazor-app-6.0)
-- [IIS web.config](./IIS/)
+- [ASP.NET Core Web App 6.0](./web-app-6.0)
+- [ASP.NET Core Web App 5.0](./web-app-5.0)
 
 ## Summary
 
