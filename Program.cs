@@ -5,13 +5,12 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 
-// Prefer the use of environment variables using the 'dotnet-env` name transformer
-builder.Services.Configure<AppSettings>(builder.Configuration);
-
 builder.Host.ConfigureAppConfiguration((hostingContext, config) =>
 {
-    config.AddJsonFile("doppler.appSettings.json", optional: true);
+    config.AddJsonFile("doppler.appsettings.json", optional: true);
 });
+
+builder.Services.Configure<AppSettings>(builder.Configuration);
 
 var app = builder.Build();
 

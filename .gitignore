@@ -95,6 +95,7 @@ bld/
 [Bb]in/
 [Oo]bj/
 [Ll]og/
+app/
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
@@ -405,7 +406,8 @@ ASALocalRun/
 .localhistory/
 
 # Other
-doppler.appSettings.json
+doppler.appsettings.json
 web.config
 *.swp
 *.*~
+.DS_Store
